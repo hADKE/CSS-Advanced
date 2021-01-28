@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D CSS transformation - Scroll down</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+            color: white;
+        }
+        h1{
+            margin: 0px;
+            transform: translateY(80px);
+        }
+        #intro-section{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(77, 72, 145);
+            position: relative;
+        }
+        #next-section{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(131, 156, 79);
+        }
+        #scroll-down{
+            position: absolute;
+            bottom: 24px;
+            width: 46px;
+            height: 46px;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            border: 2px solid white;
+            border-radius: 100%;
+        }
+        #scroll-down::before{
+            position: absolute;
+            content: '';
+            height: 16px;
+            width: 16px;
+            left: 0px;
+            right: 0px;
+            top: 10px;
+            margin: 0 auto;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(-45deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="intro-section"> 
+        <h1>Section 1</h1>
+        <a id="scroll-down" href="#next-section"></a>
+    
+    </div>
+    <div id="next-section"><h1>Section2</h1></div>
+</body>
+</html>
